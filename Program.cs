@@ -6,7 +6,7 @@ namespace SWDEV_KC2
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine("How many records do you want to add? ");
             var numberOfRecords = int.Parse(Console.ReadLine());
@@ -33,14 +33,11 @@ namespace SWDEV_KC2
                 unicorn.ManeColor = Console.ReadLine();
 
                 Console.WriteLine("On the rarest of occasions unicorns have one or more pairs of wings.  How many pairs of wings does this unicorn have?");
-                unicorn.NumberWings = int.Parse(Console.ReadLine());
-                Console.ReadLine();
+                unicorn.NumberWings = int.Parse(Console.ReadLine());               
 
                 recordList.Add(unicorn);
 
                 Console.Clear();
-
-
             }
 
             Console.WriteLine("Printing unicorns, one moment...");
@@ -50,15 +47,13 @@ namespace SWDEV_KC2
             foreach (Unicorn unicorn in recordList)
             {
                 Console.WriteLine(" ");
-                Console.WriteLine($"Unicorn: '{unicorn.Id}'");
-                Console.WriteLine($"        Age: {unicorn.Age}");
-                Console.WriteLine($"        Length: {unicorn.Length}");
-                Console.WriteLine($"        Height: {unicorn.Height}");
-
+                Console.WriteLine($"  Unicorn: '{unicorn.Id}'");
+                Console.WriteLine($"               Age: {unicorn.Age}");
+                Console.WriteLine($"            Length: {unicorn.Length}");
+                Console.WriteLine($"            Height: {unicorn.Height}");
                 Console.WriteLine($"        Horn Color: {unicorn.HornColor}");
                 Console.WriteLine($"        Mane Color: {unicorn.ManeColor}");
-                Console.WriteLine($"        Pairs of Wings: {unicorn.NumberWings}");
-
+                Console.WriteLine($"    Pairs of Wings: {unicorn.NumberWings}");
                 Console.WriteLine(" ");
             }
         }
